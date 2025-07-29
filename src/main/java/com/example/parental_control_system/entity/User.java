@@ -40,4 +40,7 @@ public class User {
 
     @CreationTimestamp
     private LocalDateTime createdAt;
+
+    public void setUsername(String username) {
+    }
 }

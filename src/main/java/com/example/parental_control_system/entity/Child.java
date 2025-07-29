@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Entity
@@ -27,4 +28,11 @@ public class Child {
 
     @OneToMany(mappedBy = "child", cascade = CascadeType.ALL)
     private List<Activity> activities = new ArrayList<>();
+
+    public void setParent(User parent) {
+    }
+
+    public Arrays getActivities() {
+        return null;
+    }
 }

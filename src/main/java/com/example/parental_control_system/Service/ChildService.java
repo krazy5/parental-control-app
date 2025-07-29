@@ -1,11 +1,17 @@
 package com.example.parental_control_system.Service;
 
+import com.example.parental_control_system.dto.ActivityResponse;
+import com.example.parental_control_system.dto.ChildMapper;
+import com.example.parental_control_system.dto.ChildResponse;
+import com.example.parental_control_system.dto.CreateChildRequest;
 import com.example.parental_control_system.entity.Child;
 import com.example.parental_control_system.entity.User;
 import com.example.parental_control_system.repository.ChildRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -42,7 +48,7 @@ public class ChildService {
                 .orElseThrow(() -> new ResourceNotFoundException("Child"));
         return child.getActivities()
                 .stream()
-                .map(ActivityMapper.INSTANCE::toDto)
+                .map(ActivityMapper.INSTANCE::todto)
                 .toList();
     }
 }

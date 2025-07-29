@@ -1,6 +1,8 @@
 package com.example.parental_control_system.controller;
 
 import com.example.parental_control_system.Service.ChildService;
+import com.example.parental_control_system.dto.ChildResponse;
+import com.example.parental_control_system.dto.CreateChildRequest;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.HttpStatus;

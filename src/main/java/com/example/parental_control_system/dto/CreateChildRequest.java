@@ -16,17 +16,5 @@ public class CreateChildRequest {
     private LocalDate birthDate;
 }
 
-@Data
-public class ChildResponse {
-    private Long id;
-    private String name;
-    private LocalDate birthDate;
-}
 
-@Mapper(componentModel = "spring")
-public interface ChildMapper {
-    ChildMapper INSTANCE = Mappers.getMapper(ChildMapper.class);
 
-    Child          toEntity(CreateChildRequest dto);
-    ChildResponse  toDto(Child entity);
-}
